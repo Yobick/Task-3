@@ -11,7 +11,7 @@ def update_stock(line)
     return if item_in_stock.last == "full"
 
     item_in_stock.delete_at(2) if
-      tem_in_stock.last == "out of stock" &&
+      item_in_stock.last == "out of stock" &&
       line_data.first.to_i > 0
 
     item_in_stock[0] = (item_in_stock.first.to_i + line_data.first.to_i).to_s
